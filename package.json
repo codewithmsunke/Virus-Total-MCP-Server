@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/form-data": "^2.2.1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "axios": "^1.12.1",
+    "typescript": "^5.9.2",
+    "zod": "^3.25.76"
+  }
+}
