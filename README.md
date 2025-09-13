@@ -50,6 +50,60 @@ Gets a report for a file from VirusTotal.
 - Input: `fileHash` (string) - MD5/SHA-1/SHA-256 hash or analysis ID
 - Output: Detailed analysis report including antivirus detections
 
+### Example Output
+
+When scanning a file, you'll receive a detailed analysis report. Here's an example output:
+
+```json
+{
+  "data": {
+    "attributes": {
+      "last_analysis_stats": {
+        "harmless": 0,
+        "malicious": 0,
+        "suspicious": 0,
+        "undetected": 70,
+        "timeout": 0,
+        "type-unsupported": 6
+      },
+      "magic": "PE32+ executable (console) x86-64, for MS Windows",
+      "size": 85268464,
+      "type_description": "Win32 EXE",
+      "type_tags": [
+        "executable",
+        "windows",
+        "win32",
+        "pe",
+        "peexe"
+      ],
+      "signature_info": {
+        "product": "Node.js",
+        "verified": "Signed",
+        "description": "Node.js JavaScript Runtime",
+        "file version": "22.19.0",
+        "signing date": "07:54 AM 08/28/2025",
+        "original name": "node.exe",
+        "signers": "OpenJS Foundation; Microsoft ID Verified CS AOC CA 01"
+      },
+      "first_submission_date": 1756417347,
+      "last_analysis_date": 1757069321,
+      "times_submitted": 21,
+      "total_votes": {
+        "harmless": 0,
+        "malicious": 0
+      }
+    }
+  }
+}
+```
+
+The report includes:
+- Security scan results from multiple antivirus engines
+- File metadata (type, size, signatures)
+- Analysis history and community feedback
+- Digital signature verification (for signed files)
+- File characteristics and classification
+
 ## Debug Features
 
 ### Environment Variable Verification
